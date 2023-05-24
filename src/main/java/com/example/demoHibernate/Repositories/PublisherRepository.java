@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import java.util.Optional;
 import java.util.UUID;
 
+//https://www.sipios.com/blog-tech/generate-spring-boot-migrations-from-hibernate-entities
 @Component
 public class PublisherRepository implements CrudRepository<Publisher, UUID>{
     @Override

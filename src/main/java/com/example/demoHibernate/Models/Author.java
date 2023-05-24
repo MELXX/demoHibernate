@@ -11,6 +11,7 @@ import java.util.UUID;
 @Entity
 public class Author {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID Id;
     private String FirstName;
     private String LastName;

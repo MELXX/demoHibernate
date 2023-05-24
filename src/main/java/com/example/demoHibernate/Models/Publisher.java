@@ -1,8 +1,6 @@
 package com.example.demoHibernate.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
@@ -12,7 +10,9 @@ import java.util.UUID;
 @Entity
 public class Publisher {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID Id;
+    @Column(nullable = false)
     private String Name;
     @OneToMany
     private List<Book> Books;
